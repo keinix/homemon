@@ -1,3 +1,5 @@
+github.com/Ullaakut/nmap v0.0.0-20190907125850-63196347c2d4 h1:M0pePvp0n0gkeJrOGZw1Uyez3SGfA8Wh9WkQRkXSzhY=
+github.com/Ullaakut/nmap v0.0.0-20190907125850-63196347c2d4/go.mod h1:fkC066hwfcoKwlI7DS2ARTggSVtBTZYCjVH1TzuTMaQ=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/gin-contrib/sse v0.0.0-20190301062529-5545eab6dad3 h1:t8FVkw33L+wilf2QiWkw0UV77qRpcH/JHPKGpKa2E8g=
 github.com/gin-contrib/sse v0.0.0-20190301062529-5545eab6dad3/go.mod h1:VJ0WA2NBN22VlZ2dKZQPAPnyWw5XTlK1KymzLKsr59s=

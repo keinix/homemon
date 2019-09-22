@@ -6,18 +6,19 @@ import (
 )
 
 type LocalConfig struct {
-	Scan ScanConfig
+	Scan   ScanConfig
 	Server ServerConfig
+	temp   string
 }
 
 type ScanConfig struct {
 	Frequency int
-	Scans []string
+	Scans     []string
 }
 
 type ServerConfig struct {
 	Port string
-	Ip string
+	Ip   string
 }
 
 func (c *LocalConfig) SetFromFile(path string) error {
@@ -29,4 +30,4 @@ func (c *LocalConfig) SetFromFile(path string) error {
 		return err
 	}
 	return nil
- }
+}

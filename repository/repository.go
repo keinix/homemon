@@ -2,12 +2,9 @@ package repository
 
 import (
 	"fmt"
+	"github.com/Ullaakut/nmap"
 )
 
-type ScanResult struct {
-	Temp string
-}
-
-func StoreScan(r ScanResult) {
-	fmt.Println(r)
+func StoreScan(r *nmap.Run) {
+	fmt.Printf("%+v\n", r.Hosts)
 }
