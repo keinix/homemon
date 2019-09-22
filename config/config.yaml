@@ -3,6 +3,6 @@ server:
   port: 8080
 
 scan:
-  frequency: 1000
+  frequency: 10000
   scans:
-    - test nmap scan
+    - test nmap scanner

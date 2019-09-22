@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"homemon/config"
+	"homemon/scanner"
 )
 
 func main() {
@@ -10,6 +11,7 @@ func main() {
 	if err := localConfig.SetFromFile("config/config.yaml"); err != nil {
 		panic(err)
 	}
+	go scanner.ScanNetwork(&localConfig.Scan)
 	startWebServer(&localConfig.Server)
 }
 
