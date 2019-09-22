@@ -1,15 +1,25 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"homemon/config"
+)
 
 func main() {
-	r := gin.Default()
+	localConfig := config.LocalConfig{}
+	if err := localConfig.SetFromFile("config/config.yaml"); err != nil {
+		panic(err)
+	}
+	startWebServer(&localConfig.Server)
+}
 
+func startWebServer(c *config.ServerConfig) {
+	r := gin.Default()
 	r.GET("/raw", RawHandler)
 	r.GET("/now", NowHandler)
 	r.GET("/activity", ActivityHandler)
 
-	if err := r.Run(); err != nil {
+	if err := r.Run(":" + c.Port); err != nil {
 		panic(err)
 	}
 }
