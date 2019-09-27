@@ -5,6 +5,12 @@ import (
 	"github.com/Ullaakut/nmap"
 )
 
-func StoreScan(r *nmap.Run) {
-	fmt.Printf("%+v\n", r.Hosts)
+type BatchScan struct {
+	TimeCompleted int64
+	UniqueHosts   []string
+	Scans         []nmap.Run
+}
+
+func StoreScan(b BatchScan) {
+	fmt.Printf("%+v\n", b.UniqueHosts)
 }
